@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "e7d7d1b9-93cb-46d1-baac-dc80116061cd",
+		"name": "feeling-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Average Feeling Indicator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/feeling/averageForDay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"feeling",
+						"averageForDay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Feeling Indicator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"feelingIndicator\":5,\"message\":\"This is a good feeling\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/feeling/record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"feeling",
+						"record"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
